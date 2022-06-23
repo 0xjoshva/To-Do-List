@@ -1,12 +1,16 @@
+let id = [];
+
+
+
 //add new task
 function addNewTask() {
   const newTask = document.querySelector("#taskInput").value;
-   const id = ;
   
    const dateAdded = new Date().toLocaleDateString();
    const dateSlice = dateAdded.toDateString().split(' ');
    const dateFormat = dateSlice[2] + ' ' + dateSlice[1] + ' ' + dateSlice[3];
   
+  let time = new Date().toLocaleTimeString([], { hour:'2-digit', minute:"2-digit", hour12: false });
 // const time = 
   document.querySelector(".container").innerHTML += `
     <li class="item">
