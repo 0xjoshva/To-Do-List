@@ -1,3 +1,6 @@
+@import url('http://fonts.cdnfonts.com/css/nrt-reg');
+/* font-family: 'NRT Reg', sans-serif; */
+                                                
 @import url("http://fonts.cdnfonts.com/css/league-mono");
 /* font-family: 'League Mono', sans-serif; */
 @import url('http://fonts.cdnfonts.com/css/gelion');
@@ -50,23 +53,35 @@ h1 span{
   text-align: justify;
   flex-direction: row;
   justify-content: space-between;
-  
   width: 800px;
   height: 60px;
   align-items:center;
   transition: all 0.1s;
   color: white;
   border-radius: 5px 5px;
+  padding-left: 1%;
+  padding-right: 1%;
+  color: rgb(197, 191, 191);
+}
+
+.item span{
+  color: rgb(217, 210, 210);
+  text-align: justify;
 }
 
 .item:hover {
   background-color: #414345c0;
 }
 
-.container h5{
-  color: rgba(163, 159, 159, 0.889);
-  font-size: 18px;
-  font-family: 'Gelion', sans-serif;
+.filters{
+  color: rgba(163, 159, 159, 0.938);
+  font-size: 15px !important;
+  font-family: 'NRT Reg', sans-serif;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-evenly;
+  width: fit-content;
+
 }
 
 .container h6 {
@@ -120,10 +135,24 @@ textarea:focus, input:focus{
 }
 
 .checked{
-    text-decoration: line-through;
+    
     background: #6f7173;
+}
+
+.checked span{
+  text-decoration: line-through;
 }
 
 .checked:hover{
   background: #6f7173;
+}
+
+
+.filters i{
+  color: #ffffff9b;
+}
+
+.bi-clock{
+  font-size: 13px;
+  font-weight: bold;
 }

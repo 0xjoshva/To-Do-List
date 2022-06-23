@@ -1,9 +1,21 @@
 //add new task
 function addNewTask() {
   const newTask = document.querySelector("#taskInput").value;
-  document.querySelector(
-    ".container"
-  ).innerHTML += `<li class="item">${newTask}</li>`;
+   const id = ;
+  
+   const dateAdded = new Date().toLocaleDateString();
+   const dateSlice = dateAdded.toDateString().split(' ');
+   const dateFormat = dateSlice[2] + ' ' + dateSlice[1] + ' ' + dateSlice[3];
+  
+// const time = 
+  document.querySelector(".container").innerHTML += `
+    <li class="item">
+    ${id}
+    <span>${newTask}</span>
+    ${dateFormat}
+    <div id="time">${time}</div>
+    </li>
+    `;
 }
 
 
@@ -18,3 +30,18 @@ list.addEventListener(
   },
   false
 );
+
+
+
+
+// localStorage.setItem('records', JSON.stringify(lists));
+
+// //Load data
+
+// (function loadData() {
+//   console.log(lists)
+// })();
+
+// //load data
+// //add event listener
+// document.querySelector('#addRecord')
