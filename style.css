@@ -1,12 +1,37 @@
-@import url('http://fonts.cdnfonts.com/css/nrt-reg');
+@import url("http://fonts.cdnfonts.com/css/nrt-reg");
 /* font-family: 'NRT Reg', sans-serif; */
-                                                
+
 @import url("http://fonts.cdnfonts.com/css/league-mono");
 /* font-family: 'League Mono', sans-serif; */
-@import url('http://fonts.cdnfonts.com/css/gelion');
+@import url("http://fonts.cdnfonts.com/css/gelion");
 /* font-family: 'Gelion', sans-serif; */
-                                                
-                
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 
 body {
   background: #232526; /* fallback for old browsers */
@@ -22,22 +47,23 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-h1{
-     font-family: 'Gelion', sans-serif;
-    font-weight: bolder;
-    font-size: 100px !important;
+#heading {
+  font-family: "Gelion", sans-serif;
+  font-weight: bold;
+  font-size: 100px !important;
 }
 
-h1 span{
-     font-family: 'Gelion', sans-serif;
-    font-weight: lighter;
-    font-size: 100px !important;
+#thin-header {
+  font-family: "Gelion", sans-serif;
+  font-weight: lighter;
+  font-size: 100px !important;
+  font-style: normal;
 }
 
-#subheader{
-    color: #65696c;
-    font-size: 30px;
-    font-family: 'League Mono', sans-serif;
+#subheader {
+  color: #65696c;
+  font-size: 30px;
+  font-family: "League Mono", sans-serif;
 }
 
 .container {
@@ -53,9 +79,9 @@ h1 span{
   text-align: justify;
   flex-direction: row;
   justify-content: space-between;
-  width: 800px;
+  align-items: center;
+    width: 800px;
   height: 60px;
-  align-items:center;
   transition: all 0.1s;
   color: white;
   border-radius: 5px 5px;
@@ -64,95 +90,142 @@ h1 span{
   color: rgb(197, 191, 191);
 }
 
-.item span{
+#newTask {
   color: rgb(217, 210, 210);
   text-align: justify;
+  pointer-events: none;
+  min-width: 500px !important;
+}
+
+#index{
+text-decoration: none;
+}
+
+#dateNow{
+text-decoration: none;
+}
+#timeNow{
+text-decoration: none;
 }
 
 .item:hover {
   background-color: #414345c0;
 }
 
-.filters{
-  color: rgba(163, 159, 159, 0.938);
-  font-size: 15px !important;
-  font-family: 'NRT Reg', sans-serif;
-  display: flex;
-  flex-direction: row !important;
-  justify-content: space-evenly;
-  width: fit-content;
-
+#close {
+  transition: all 0.1s;
 }
 
+#close:hover {
+  display: block;
+  background: rgba(207, 97, 97, 0.589);
+  color: white;
+  display: block;
+  height: 60px;
+  width: 50px !important;
+}
 .container h6 {
   border-bottom: rgba(119, 114, 114, 0.703) 1px solid;
-  margin: 0;
+  margin: 0 auto;
   color: white;
   text-align: justify;
   width: 800px;
 }
 
-i{
-    color: white;
-    font-weight: lighter;
-    
+#plus {
+  color: white;
+  font-weight: lighter;
 }
 
-#container1{
+#container1 {
   height: 37px;
   width: fit-content;
   background-color: #2d2e2e;
   border: 1px solid white;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-button{
+#addTask {
   height: 34px;
-  margin:0;
+  margin: 0;
   background-color: #2d2e2e;
   border: none;
-  color:white;
+  color: white;
   font-weight: 100;
   padding-left: 10px;
   padding-right: 10px;
 }
-input{
+#taskInput {
   border: none;
-    background-color: #2d2e2e;
-    width: 300px;
-    height: 35px;
-  margin:0;
-  padding-left:10px;
+  background-color: #2d2e2e;
+  width: 300px;
+  height: 35px;
+  margin: 0;
+  padding-left: 10px;
   color: white;
-
-  
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
-.checked{
-    
-    background: #6f7173;
-}
-
-.checked span{
-  text-decoration: line-through;
-}
-
-.checked:hover{
+.checked {
   background: #6f7173;
 }
 
-
-.filters i{
-  color: #ffffff9b;
+.checked span {
+  text-decoration: line-through;
 }
 
-.bi-clock{
+.checked:hover {
+  background: #6f7173;
+}
+
+#filterings {
+  color: #9fa0a1c0;
   font-size: 13px;
-  font-weight: bold;
+  letter-spacing: 1px;
+  width: 800px;
+  display: flex;
+  text-align: justify;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 5%;
+  padding-bottom: 0.5%;
 }
+
+#title{
+  min-width: 400px !important;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  text-align: left;
+  float: left;
+  
+}
+
+#hash{
+  font-size:18px;
+  color: #b9bbbdc0;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+}
+
+input[type="checkbox"] {
+    background: #990000 !important;    
+}
+

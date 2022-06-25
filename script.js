@@ -1,4 +1,9 @@
-let id = [];
+
+
+
+
+
+var indexArr = [];
 
 
 
@@ -6,46 +11,66 @@ let id = [];
 function addNewTask() {
   const newTask = document.querySelector("#taskInput").value;
   
-   const dateAdded = new Date().toLocaleDateString();
-   const dateSlice = dateAdded.toDateString().split(' ');
-   const dateFormat = dateSlice[2] + ' ' + dateSlice[1] + ' ' + dateSlice[3];
-  
-  let time = new Date().toLocaleTimeString([], { hour:'2-digit', minute:"2-digit", hour12: false });
-// const time = 
-  document.querySelector(".container").innerHTML += `
-    <li class="item">
-    ${id}
-    <span>${newTask}</span>
-    ${dateFormat}
-    <div id="time">${time}</div>
+    indexArr.push(newTask);
+    console.log(indexArr);
+
+    //index of tasks
+  for (var i = 0; i < indexArr.length; i++) { console.log(i) }
+  let index = i;
+
+
+    let date = new Date();
+    let dateArr = date.toDateString().split(" ");
+    let dateFormat = dateArr[2] + " " + dateArr[1] + ", " + dateArr[3];
+    let dateNow = dateFormat.toString();
+
+    let time = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    });
+    let timeNow = time.toString();
+
+    //write task to HTML
+  if (newTask === "") {
+    return
+  } else {
+    document.querySelector(".container").innerHTML += `
+    <li class="item" ondblclick="dblClose()">
+    <span id="index">${index}</span>
+    <span id="newTask">${newTask}</span>
+    <span id="dateNow">${dateNow}</span>
+    <span><input type="checkbox"></span>
+    <span id="timeNow">${timeNow}</span>
     </li>
     `;
-}
+  }
+  }
 
 
-// Add a "checked" symbol when clicking on a list item
+ 
+
+// Add a "checked" class when clicking on a list item
 var list = document.querySelector("ul");
 list.addEventListener(
   "click",
-  function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("checked");
+  function (event) {
+    if (event.target.tagName === "LI") {
+      event.target.classList.toggle("checked");
     }
   },
-  false
+  
 );
 
 
+function dblClose() {
+
+  tasks.splice(tasks.indexOf(task), 1);
+
+}
 
 
-// localStorage.setItem('records', JSON.stringify(lists));
+function sortDesc() {
 
-// //Load data
-
-// (function loadData() {
-//   console.log(lists)
-// })();
-
-// //load data
-// //add event listener
-// document.querySelector('#addRecord')
+  index.sort((a, b) => b - a);
+}
