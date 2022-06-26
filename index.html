@@ -21,7 +21,7 @@
   </head>
   <body>
     <section id="home">
-      <i class="bi bi-mouse"></i> click on tasks to check them off!
+      
       <!-- header -->
       <h1 class="text-center text-white" id="heading">TIME<span id="thin-header">SCHEME</span></h1>
 
@@ -32,13 +32,13 @@
         <!-- inputbox -->
         <div id="container1">
           <input id="taskInput" placeholder="add a new task..." required/>
-          <button id="addTask" onclick="addNewTask() "><i class="bi bi-plus" id="plus"></i></button>
+          <button id="addTask" onclick="addNewTask(event) "><i class="bi bi-plus" id="plus"></i></button>
         </div>
 
 
         <!-- filter headings -->
         <section id="filterings">
-            <button onclick="sortDesc()" id="hash">#</button><button id="title">TITLE</button><span id="date">DATE ADDED</span><span id="time">TIME</span>
+            <button onclick="sortDesc()" id="hash">#</button><button id="title">TITLE</button><span id="date">DATE ADDED</span><span id="time">TIME</span><span id="delete">DELETE</span>
 
         
         </section>

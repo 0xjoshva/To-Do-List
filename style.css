@@ -50,13 +50,13 @@ body {
 #heading {
   font-family: "Gelion", sans-serif;
   font-weight: bold;
-  font-size: 100px !important;
+  font-size: 100px;
 }
 
 #thin-header {
   font-family: "Gelion", sans-serif;
   font-weight: lighter;
-  font-size: 100px !important;
+  font-size: 100px;
   font-style: normal;
 }
 
@@ -74,6 +74,7 @@ body {
   border-radius: 20px 20px;
 }
 
+/* task item */
 .item {
   display: flex;
   text-align: justify;
@@ -88,13 +89,33 @@ body {
   padding-left: 1%;
   padding-right: 1%;
   color: rgb(197, 191, 191);
+  border: solid rgba(#000, .2);
 }
 
+.item:hover {
+  background-color: #4b4d5085;
+}
+
+/* task onclick style */
+.checked {
+  background: #5a5b5c;
+}
+
+.checked span {
+  text-decoration: line-through;
+}
+
+.checked:hover {
+  background: #6f7173;
+}
+
+/* task text decoration */
 #newTask {
   color: rgb(217, 210, 210);
   text-align: justify;
   pointer-events: none;
   min-width: 500px !important;
+  
 }
 
 #index{
@@ -106,10 +127,6 @@ text-decoration: none;
 }
 #timeNow{
 text-decoration: none;
-}
-
-.item:hover {
-  background-color: #414345c0;
 }
 
 #close {
@@ -172,17 +189,7 @@ input:focus {
   outline: none;
 }
 
-.checked {
-  background: #6f7173;
-}
 
-.checked span {
-  text-decoration: line-through;
-}
-
-.checked:hover {
-  background: #6f7173;
-}
 
 #filterings {
   color: #9fa0a1c0;
@@ -229,3 +236,93 @@ input[type="checkbox"] {
     background: #990000 !important;    
 }
 
+#delete-btn{
+  color: #c9c9c9c0;
+  font-size: 15px;
+  background: none;
+  font-size: medium;
+  width: 45px;
+}
+
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/  
+#heading {
+  font-family: "Gelion", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+}
+#thin-header{
+font-size: 80px;
+}
+.item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+#newTask{
+  min-width: 0px !important;
+}
+#filterings{
+  width: 100% !important;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  
+}
+#title{
+  min-width: 0px !important;
+}
+.container h6 {
+  width: max-content !important;
+}
+
+#dateNow{
+pointer-events: none;
+}
+}
+
+
+
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+#dateNow{
+pointer-events: none;
+}
+
+  #heading {
+  font-family: "Gelion", sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+}
+#thin-header{
+font-size: 60px;
+}
+.item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+#newTask{
+  min-width: 0px !important;
+}
+#filterings{
+  width: 100% !important;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 30px;
+}
+#title{
+  min-width: 0px !important;
+}
+.container h6 {
+  width: 100% !important;
+}
+}
