@@ -40,7 +40,7 @@ function addNewTask() {
     <span id="index">${index}</span>
     <span id="newTask">${newTask}</span>
     <span id="dateNow">${dateNow}</span>
-    <span><input type="checkbox"></span>
+    <span><input type="checkbox" id="checkingbox"></span>
     <span id="timeNow">${timeNow}</span>
     </li>
     `;
@@ -57,6 +57,7 @@ list.addEventListener(
   function (event) {
     if (event.target.tagName === "LI") {
       event.target.classList.toggle("checked");
+      document.getElementById('checkingbox').toggle(this.checked);
     }
   },
   
