@@ -246,6 +246,40 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 1200px){
     /*Tablets [601px -> 1200px]*/
+    #heading {
+  font-family: "Gelion", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+}
+#thin-header{
+font-size: 80px;
+}
+.item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+#newTask{
+  min-width: 0px !important;
+}
+#filterings{
+  width: 100% !important;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  
+}
+#title{
+  min-width: 0px !important;
+}
+.container h6 {
+  width: max-content !important;
+}
+
+#dateNow{
+pointer-events: none;
+}
     
 }
 

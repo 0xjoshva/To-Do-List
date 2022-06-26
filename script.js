@@ -1,8 +1,6 @@
 //empty array for tasks
 var indexArr = [];
 
-
-
 //add new task
 function addNewTask(event) {
   event.preventDefault();
@@ -47,7 +45,7 @@ let time = new Date().toLocaleTimeString([], {
     <span id="dateNow">${dateNow}</span>
     <span><input type="checkbox" id="checkingbox"></span>
     <span id="timeNow">${timeNow}</span>
-    <button id="delete-btn"><i class="bi bi-trash2-fill"></i></button>
+    <button id="delete-btn" onclick="Close()"><i class="bi bi-trash2-fill"></i></button>
     </li>
     `;
   }
@@ -62,10 +60,17 @@ list.addEventListener("click", function (event) {
   }
 });
 
-function dblClose() {
-  tasks.splice(tasks.indexOf(task), 1);
-}
+// function Close() {
+//   tasks.splice(tasks.indexOf(task), 1);
+// }
 
-function sortDesc() {
-  index.sort((a, b) => b - a);
-}
+// function sortNumDesc() {
+//   index.sort((a, b) => b - a);
+// }
+
+
+// sortTitle(){
+// indexArr.sort((a, b) =>
+//   a.newTask !== b.newTask ? (a.newTask < b.newTask ? -1 : 1) : 0
+// );
+// }
